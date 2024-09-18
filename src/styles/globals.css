@@ -1,0 +1,11 @@
+/* src/styles/globals.css */
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    background-image: url('../assets/images/bg-cafe.jpg'); /* Ajusta la ruta según el nombre de tu archivo */
+    background-size: contain; /* Para cubrir toda la pantalla */
+    background-position: top; /* Centrar la imagen */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    background-color: #111315;
+  }
+  

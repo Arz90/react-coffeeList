@@ -1,0 +1,98 @@
+.coffee-list-page {
+  margin: 130px 80px;
+  background-color: #1B1D1F;
+  color: #FEF7EE;
+  border-radius: 8px;
+  padding: 24px;
+  
+}
+
+.header {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2rem;
+  color: #FEF7EE;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.description {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  margin: 16px auto 32px;
+  text-align: center;
+  color: #6F757C;
+  max-width: 500px; 
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  font-size: 0.875rem;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  background: none;
+  padding: 8px 16px;
+  color: #FEF7EE;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background-color: #6F757C;
+  color: #FEF7EE;
+}
+
+.coffee-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 1024px) {
+  .coffee-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .coffee-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+  }
+
+  .header {
+    font-size: 1.75rem;
+  }
+
+  .coffee-list-page {
+    margin: 40px 20px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coffee-grid {
+    grid-template-columns: 1fr; /* 1 columna en móviles */
+  }
+
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    margin: 12px auto 24px;
+  }
+
+  .filter-buttons {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+}

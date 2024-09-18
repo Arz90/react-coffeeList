@@ -1,0 +1,145 @@
+.coffee-card {
+  background-color: #1B1D1F;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.coffee-card:hover {
+  transform: scale(1.05);
+}
+
+.coffee-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.coffee-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.popular-tag,
+.unavailable-tag {
+  position: absolute;
+  background-color: #F6C768;
+  color: #111315;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.625rem;
+  font-weight: 700;
+  z-index: 10;
+}
+
+.popular-tag {
+  top: 8px;
+  left: 8px;
+}
+
+.unavailable-tag {
+  top: 8px;
+  left: 8px;
+}
+
+.coffee-info {
+  padding: 16px;
+  color: #FEF7EE;
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+}
+
+.coffee-name-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.coffee-name {
+  /*  font-size: 1.125rem;  */
+  font-weight: 500;
+}
+
+.coffee-price {
+  color: #111315;
+  /* font-size: 0.75rem; */
+  font-weight: 700;
+  background-color: #BEE3CC;
+  border-radius: 6px;
+  padding: 0.2rem 0.5rem;
+  width: 2.5rem;
+  text-align: center;
+}
+
+.coffee-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* Espacio entre los elementos */
+}
+
+.vote-star {
+  width: 25px;
+  height: 25px;
+}
+
+.rating-value {
+  font-size: 0.875rem;
+  color: #FEF7EE;
+}
+
+.votes {
+  font-size: 0.875rem;
+  color: #FEF7EE;
+}
+
+.unavailable {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.unavailable-tag {
+  color: #ED735D; /* Color rojo */
+  background-color: transparent; /* Quita el fondo */
+  position: relative; /* Elimina la posición absoluta para colocarlo correctamente */
+  top: auto; /* Reinicia la posición superior */
+  left: 15%; /* Reinicia la posición izquierda */
+  margin-top: 4px; /* Añade un pequeño margen superior */
+  font-size: 0.875rem; /* Ajusta el tamaño de la fuente */
+  font-weight: bold; /* Pone en negrita el texto */
+}
+
+
+
+@media (max-width: 480px) {
+  .coffee-image-container {
+    height: 150px;
+  }
+
+  .popular-tag,
+  .unavailable-tag {
+    font-size: 0.5rem;
+    padding: 2px 6px;
+  }
+}
+
+.votes.has-votes {
+  color: #FEF7EE;
+}
+
+.votes.no-votes {
+  color: #6F757C;
+  margin-left:-10px;
+}
